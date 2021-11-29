@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\WorkspaceController;
+use App\Http\Controllers\FoldersController;
+
 
 /**
  *
@@ -24,6 +26,23 @@ Route::prefix('auth')->group(function () {
     Route::post('/login',    [AuthController::class, 'login'])->name('auth.login');
     Route::post('/logout',   [AuthController::class, 'logout'])->name('auth.logout');
 });
+
+/**
+ *
+ * Folders Views
+ *
+ */
+Route::prefix('folders')->group(function () {
+    Route::get('/manage',    [FoldersController::class, 'manage'])->name('folders.manage');
+    Route::get('/new',       [FoldersController::class, 'new'])->name('folders.new');
+    Route::post('/create',   [FoldersController::class, 'create'])->name('folders.create');
+});
+
+/**
+ *
+ * Workspace Views
+ *
+ */
 
 Route::prefix('workspace')->group(function () {
     Route::get('/home',      [WorkspaceController::class, 'home'])->name('workspace.home');

@@ -4,30 +4,40 @@ body {
     background-color: rgb(92, 166, 196);
 }
 
+/* Authentication forms */
 .form-signin {
     width: 100%;
     max-width: 330px;
     padding: 15px;
     margin: auto;
-  }
+}
 
-  .form-signin .checkbox {
+.form-signin .checkbox {
     font-weight: 400;
-  }
+}
 
-  .form-signin .form-floating:focus-within {
+.form-signin .form-floating:focus-within {
     z-index: 2;
-  }
+}
 
-  .form-signin input[type="email"] {
+.form-signin input[type="email"] {
     margin-bottom: -1px;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
-  }
+}
 
-  .form-signin input[type="password"] {
+.form-signin input[type="password"] {
     margin-bottom: 10px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-  }
+}
+
+/* Folder cards */
+.folder-card {
+    background-color: rba(0,0,0,1);
+}
+
+.folder-card-create {
+    background-color: rgba(255,255,255,0.25);
+}
 

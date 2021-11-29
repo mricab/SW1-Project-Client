@@ -50,7 +50,7 @@ class AuthController extends Controller
 
         if($response->ok()) {
             $request->session()->put('token', $response['token']);
-            return redirect()->route('workspace.home');
+            return redirect()->route('folders.manage');
         } else {
             if (isset($response['errors'])) {
                 return redirect()->back()->withErrors($response['errors'])->withInput();
